@@ -109,6 +109,21 @@ Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
+Package: com.cannathea.afc2d-arm64
+Version: 1.2.1
+Architecture: iphoneos-arm64
+Name: Apple File Conduit "2" (iOS 11+, arm64)
+Description: Allow full file-system access over USB for all arm64 devices, especially useful for those on iOS 11 and above.
+Maintainer: Cannathea
+Author: Cannathea
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: cy+cpu.arm64, ldid
+Section: System
+MD5sum: 5ab70f252df295b9ff6a1abf76134497
+SHA256: f8432b0621e3cab89d2f6993bbf2b1b33d65b023eec95949a2d60e3110cecf09
+Filename: debs/com.cannathea.afc2d-arm64_1.2.1_iphoneos-arm.deb
+Depiction: https://moreinfo.thebigboss.org/moreinfo/depiction.php?file=afc2kpplessDp
+
 Package: com.hackcatml.mldecrypt
 Version: 0.2.3
 Architecture: iphoneos-arm
@@ -143,6 +158,18 @@ Tag: role::hacker
 Author: hackcatml
 Name: mldecrypt
 
+Package: com.isecpartners.nabla.sslkillswitch
+Version: 0.6-1
+Architecture: iphoneos-arm
+Maintainer: Alban Diquet <alban@isecpartners.com>
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/com.isecpartners.nabla.sslkillswitch_v0.6-iOS_7.0.deb
+Section: Tweaks
+Installed-Size: 76
+Description: Blackbox tool to disable SSL certificate validation - including certificate pinning - within iOS Apps.
+Author: Alban Diquet <alban@isecpartners.com>
+Name: iOS SSL Kill Switch
+
 Package: com.lukezgd.dropbear
 Version: 1.0.3
 Architecture: iphoneos-arm
@@ -173,6 +200,56 @@ Description: NewTerm 2 installer for socket jailbreak and other rootful (mainly 
 Author: LukeZGD
 Name: NewTerm 2 Installer for Socket
 
+Package: com.officialscheduler.sshconnect
+Version: 1.3-3
+Section: Tweaks
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), openssh
+Architecture: iphoneos-arm
+Filename: debs/com.officialscheduler.sshconnect_1.3-3_iphoneos-arm.deb
+Size: 23398
+Installed-Size: 320
+MD5sum: b4ebdf02e2da85c73275a4635f73f725
+SHA256: 6130248bca95faa9744e7ccb9bb48dfd0d850d9a23fee6135f97836b6716edbc
+Description: toggle SSH & view network interfaces in Settings
+Author: lordscotland <admin@officialscheduler.com>
+Depiction: https://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sshconnectDp
+Name: SSH Connect
+
+Package: com.opa334.trollstorehelper
+Version: 2.1
+Architecture: iphoneos-arm
+Maintainer: opa334 <opa334@protonmail.com>
+Author: opa334 <opa334@protonmail.com>
+Installed-Size: 4400
+Size: 1919648
+MD5sum: ca213f963a5a097da923e339c1bdbdd8
+SHA256: 446cb7c61b2e46d92cce9c26b2bff509e7d95df200370fa51fd2a6d098602eec
+Filename: debs/com.opa334.trollstorehelper_2.1_iphoneos-arm.deb
+Section: Applications
+Description: Helper utility to install and manage TrollStore!
+Depiction: https://havoc.app/depiction/trollhelper
+Name: TrollStore Helper
+
+Package: ellekit
+Architecture: iphoneos-arm
+Version: 1.1.3
+Priority: optional
+Section: Tweak Injection
+Maintainer: Dhinak G <dhinak@dhinak.net>
+Provides: mobilesubstrate (= 99), org.coolstar.libhooker (= 1.6.9)
+Conflicts: com.ex.substitute, org.coolstar.libhooker, science.xnu.substitute, mobilesubstrate, com.saurik.substrate.safemode
+Replaces: com.ex.libsubstitute, org.coolstar.libhooker, mobilesubstrate
+Filename: debs/ellekit_1.1.3_iphoneos-arm.deb
+Size: 353080
+MD5sum: a0c56c27d2bd4277dfa72bc0a72d42fd
+SHA1: c46de29f16c8cf76523ab8dc555fee5c684b800e
+SHA256: 4b412c334ff4b0a6e2baf121a3ca99ed467efd736b8605568eb2833f16b2f56c
+Description: ElleKit tweak injection libraries and loader
+Author: Evelyn
+Icon: https://ellekit.space/logos/logo.png
+Name: ElleKit
+
 Package: ipwnderlite
 Version: 1.0.69
 Architecture: iphoneos-arm64
@@ -186,7 +263,6 @@ SHA256: 93a9ee4ac459478876ee17c7e4c30b418fca3a0bb2645f4293b105c816f110a6
 Section: System
 Description: iPwnder Lite for iPhoneOS.
 Author: sakuRdev/dora2ios
-Depiction: https://raw.githubusercontent.com/dora2ios/ipwnder_lite/fba4c52bfeaa44ea2a51cd89e0fc48a906d31d9d/README.md
 Name: iPwnder Lite (Rootless)
 
 Package: ipwnderlite32
@@ -203,7 +279,6 @@ SHA256: b887948ac97ffb4744b087e4e5e0bfe1bdc075902481035a70b66b8be290ec02
 Section: System
 Description: iPwnder Lite for iPhoneOS.
 Author: sakuRdev/dora2ios
-Depiction: https://raw.githubusercontent.com/dora2ios/ipwnder_lite/fba4c52bfeaa44ea2a51cd89e0fc48a906d31d9d/README.md
 Name: iPwnder Lite
 
 Package: ipwnderlite64
@@ -220,7 +295,6 @@ SHA256: 3a002fc710cd6aac02730ae53e5f51930d940b4402e2e4d5f4cfad1eb30e9f31
 Section: System
 Description: iPwnder Lite for iPhoneOS.
 Author: sakuRdev/dora2ios
-Depiction: https://raw.githubusercontent.com/dora2ios/ipwnder_lite/fba4c52bfeaa44ea2a51cd89e0fc48a906d31d9d/README.md
 Name: iPwnder Lite (iOS 11+)
 
 Package: me.jjolano.alertdismiss
@@ -234,11 +308,9 @@ MD5sum: 2282ea8ff09e382807e1aa3399996d8d
 SHA1: a0d8427704e3e458e1ed7c373d1ff236c58e1ffc
 SHA256: d7ad8fa1edf908499c807075ee62b947cd1b329300d0dc12cdf79171e69f2fb1
 Section: Tweaks
-Homepage: https://shuga.co/
 Description: Add a Force Dismiss button to any UIAlertController.
 Author: jjolano <jjolano@me.com>
 Depiction: https://ios.jjolano.me/depiction/web/me.jjolano.alertdismiss.html
-Icon: https://ios.jjolano.me/assets/me.jjolano.alertdismiss/icon.png
 Name: AlertDismiss
 
 Package: me.jjolano.alertdismiss
@@ -252,12 +324,62 @@ MD5sum: aafdecff1cda78f7877a373dcf4c0e07
 SHA1: 9b4ad7ec99a3b1480af36fc7f4dceb31b5bb1167
 SHA256: 33ef491d32f1f7642b0710aba11db3ad5c11bde9800f92d2ce46a62544b23872
 Section: Tweaks
-Homepage: https://shuga.co/
 Description: Add a Force Dismiss button to any UIAlertController.
 Author: jjolano <jjolano@me.com>
 Depiction: https://ios.jjolano.me/depiction/web/me.jjolano.alertdismiss.html
-Icon: https://ios.jjolano.me/assets/me.jjolano.alertdismiss/icon.png
 Name: AlertDismiss
+
+Package: openssh-client
+Architecture: iphoneos-arm
+Version: 9.7p1-1
+Priority: important
+Section: Networking
+Maintainer: Nick Chan <towinchenmi@gmail.com>
+Installed-Size: 3688
+Depends: libiosexec1 (>= 1.3.1), libssl3, libcrypt2, libmd0
+Conflicts: openssh (<< 1:0)
+Replaces: openssh (<< 1:0)
+Filename: debs/openssh-client_9.7p1-1_iphoneos-arm.deb
+Size: 739848
+MD5sum: 9e69d30cd936c4121f5e720bcce9204a
+SHA1: 197eafb0296704272afd625f58ef3fd8761ef4ae
+SHA256: 3016e8af7402f58ea7c6fd4062bf47ef6eb82300e3a8d507a488f9b6cc670a7e
+Description: secure shell (SSH) client, for secure access to remote machines
+Name: OpenSSH Client
+
+Package: openssh-server
+Architecture: iphoneos-arm
+Version: 9.7p1-1
+Priority: important
+Section: Networking
+Maintainer: Nick Chan <towinchenmi@gmail.com>
+Installed-Size: 1452
+Depends: libiosexec1 (>= 1.3.1), libssl3, openssh-client (= 9.7p1-1), openssh-sftp-server, libcrypt2, libpam2, libmd0
+Conflicts: com.midnightchips.localhostssh, openssh (<< 1:0)
+Replaces: openssh (<< 1:0)
+Filename: debs/openssh-server_9.7p1-1_iphoneos-arm.deb
+Size: 381134
+MD5sum: 3ce69890fdf2065ff999ba6df9b6afc7
+SHA1: c3a1a67062ccacd12ee2fabbf18806287735f228
+SHA256: de8134027534736b124a2661ae3cd3e93a6d6410ad63eed8c2fa293abf409e37
+Description: secure shell (SSH) server, for secure access from remote machines
+Name: OpenSSH Server
+
+Package: preferenceloader
+Architecture: iphoneos-arm
+Version: 2.2.8
+Section: System
+Maintainer: Dhinak G <dhinak@dhinak.net>
+Installed-Size: 428
+Depends: mobilesubstrate
+Filename: debs/preferenceloader_2.2.8_iphoneos-arm.deb
+Size: 25190
+MD5sum: eff36134e92b5439ac3c3dd363cd4bb3
+SHA1: 4763308203527dfd07a9720dad14faa51cfa8217
+SHA256: d0cc4e4b9651053465bd480e1e4fa314835abf15bc07e48d0d580e2b12801c87
+Description: load preferences in style
+Author: Dhinak G <dhinak@dhinak.net>
+Name: PreferenceLoader
 
 Package: re.frida.server
 Version: 16.1.4
@@ -297,6 +419,24 @@ Name: Frida
 
 Package: re.frida.server
 Version: 16.7.13
+Architecture: iphoneos-arm
+Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
+Installed-Size: 54576
+Conflicts: re.frida.server64
+Filename: debs/frida_16.7.13_iphoneos-arm.deb
+Size: 16842844
+MD5sum: d3ae4731ee2e768f7e029cd9c009cf23
+SHA1: d758f0ed18904428278b533db77c271828d08382
+SHA256: 480ee37eb5729811c056a79ebc02a09ed8030805dcac456762b93536f229cb6a
+Section: Development
+Priority: optional
+Homepage: https://frida.re/
+Description: Observe and reprogram running programs.
+Author: Frida Developers <oleavr@nowsecure.com>
+Name: Frida
+
+Package: re.frida.server
+Version: 16.7.13
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
 Installed-Size: 54584
@@ -313,20 +453,57 @@ Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>
 Name: Frida
 
-Package: re.frida.server
-Version: 16.7.13
+Package: u.blanxd.opensshport
+Version: 1.1.0
+Section: Security
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Depends: cy+cpu.arm64 | firmware (>= 11), openssh-server | openssh, preferenceloader, u.blanxd.sshswitch
+Replaces: u.blanxd.sshoncc (<= 1.4.0)
 Architecture: iphoneos-arm
-Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
-Installed-Size: 54576
-Conflicts: re.frida.server64
-Filename: debs/frida_16.7.13_iphoneos-arm.deb
-Size: 16842844
-MD5sum: d3ae4731ee2e768f7e029cd9c009cf23
-SHA1: d758f0ed18904428278b533db77c271828d08382
-SHA256: 480ee37eb5729811c056a79ebc02a09ed8030805dcac456762b93536f229cb6a
-Section: Development
-Priority: optional
-Homepage: https://frida.re/
-Description: Observe and reprogram running programs.
-Author: Frida Developers <oleavr@nowsecure.com>
-Name: Frida
+Filename: debs/u.blanxd.opensshport_1.1.0_iphoneos-arm.deb
+Size: 33208
+Installed-Size: 218
+MD5sum: ea561795c40633aea193888299c73ca6
+SHA256: 319357173d500eb23b5b9ee6bb2ee29d11a1b6f12dc13c8a580920f35438f217
+Description: OpenSSH menu in Settings
+Author: BlanxdH <blanxd.h@gmail.com>
+Depiction: https://moreinfo.thebigboss.org/moreinfo/depiction.php?file=opensshportDp
+Name: OpenSSH Settings
+
+Package: u.blanxd.sshswitch
+Version: 1.1.0
+Section: Utilities
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Depends: cy+cpu.arm64 | firmware (>= 11), openssh-server (>= 6.2) | openssh (>= 6.2)
+Conflicts: u.blanxd.opensshport (<< 1.0~b3)
+Replaces: u.blanxd.sshoncc (<= 1.4.0)
+Architecture: iphoneos-arm
+Filename: debs/u.blanxd.sshswitch_1.1.0_iphoneos-arm.deb
+Size: 204918
+Installed-Size: 377
+MD5sum: 9cb01d7a4fdc77244a805a51a2cadcb7
+SHA256: ed035c1f489241feea02adc57f81fb1302c05045b279f3d5b599fa26587b058f
+Description: CLI tool for changing OpenSSH settings
+Author: BlanxdH <blanxd.h@gmail.com>
+Depiction: https://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sshswitchDp
+Name: SSHswitch
+
+Package: ws.hbang.newterm2
+Architecture: iphoneos-arm
+Version: 2.5-100
+Section: Terminal Support
+Maintainer: HASHBANG Productions <support@hbang.ws>
+Installed-Size: 6664
+Depends: firmware (>= 10.0), firmware (>= 12.2) | org.swift.libswift, ws.hbang.common (>= 1.16), bash, coreutils, ncurses, system-cmds, gettext-localizations | com.linusyang.localeutf8, system-cmds (>= 880.60.2)
+Conflicts: ws.hbang.newterm, com.lint.ntarrows
+Replaces: ws.hbang.newterm, com.lint.ntarrows
+Filename: debs/ws.hbang.newterm2_2.5-100_iphoneos-arm.deb
+Size: 2147050
+MD5sum: 0c09dd7d1d9f1cc522ca56158aecad83
+SHA1: 571751464d1bb14e61e8c31ac42c3647e937f831
+SHA256: bcdd43be87bc94aadee6841cfaa590fdeca4dee596d343496b2fdcde3e7845f6
+Description: A powerful terminal app for iOS
+Author: HASHBANG Productions <support@hbang.ws>
+Icon: https://chariz.com/cdn/icon/newterm/icon@3x.png
+Depiction: https://chariz.com/get/newterm
+Name: NewTerm 2
