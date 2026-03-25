@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HongRepo — Cydia Repository</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0a0f;
@@ -15,21 +15,20 @@
     --border2: rgba(255,255,255,0.13);
     --accent: #007AFF;
     --accent2: #30d158;
+    --accent3: #ff9f0a;
+    --accent4: #bf5af2;
     --text: #f0f0f5;
     --text2: #8e8ea0;
     --text3: #5a5a6e;
-    --red: #ff453a;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
-
-  /* grid bg */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -37,26 +36,21 @@
       linear-gradient(rgba(0,122,255,0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0,122,255,0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
+    pointer-events: none; z-index: 0;
   }
-
   .glow {
     position: fixed; top: -200px; left: 50%; transform: translateX(-50%);
     width: 700px; height: 500px;
     background: radial-gradient(ellipse, rgba(0,122,255,0.12) 0%, transparent 70%);
     pointer-events: none; z-index: 0;
   }
-
   .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 20px 60px; }
 
-  /* header */
   header {
     padding: 52px 0 36px;
     display: flex; flex-direction: column; align-items: center; gap: 14px;
     text-align: center;
   }
-
   .repo-icon {
     width: 80px; height: 80px; border-radius: 20px;
     background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 50%, #007AFF 100%);
@@ -70,7 +64,6 @@
     0%,100% { box-shadow: 0 0 40px rgba(0,122,255,0.25), 0 8px 32px rgba(0,0,0,0.5); }
     50%      { box-shadow: 0 0 60px rgba(0,122,255,0.4),  0 8px 32px rgba(0,0,0,0.5); }
   }
-
   .repo-name { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
   .repo-url {
     font-family: 'JetBrains Mono', monospace;
@@ -78,25 +71,23 @@
     background: rgba(0,122,255,0.1);
     border: 1px solid rgba(0,122,255,0.2);
     padding: 5px 14px; border-radius: 6px;
-    letter-spacing: 0.02em;
   }
   .repo-desc { font-size: 15px; color: var(--text2); max-width: 380px; line-height: 1.6; }
 
-  /* add button */
-  .add-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent);
-    color: #fff; font-size: 15px; font-weight: 600;
-    padding: 12px 28px; border-radius: 12px;
-    text-decoration: none;
-    box-shadow: 0 4px 20px rgba(0,122,255,0.35);
-    transition: all .2s;
-    margin-top: 4px;
+  .app-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
+  .app-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 14px; font-weight: 600;
+    padding: 11px 22px; border-radius: 12px;
+    text-decoration: none; transition: all .2s;
   }
-  .add-btn:hover { background: #0066dd; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(0,122,255,0.5); }
-  .add-btn:active { transform: translateY(0); }
+  .app-btn.cydia { background: var(--accent); color: #fff; box-shadow: 0 4px 16px rgba(0,122,255,0.35); }
+  .app-btn.cydia:hover { background: #0066dd; transform: translateY(-1px); }
+  .app-btn.zebra { background: rgba(255,159,10,0.15); color: var(--accent3); border: 1px solid rgba(255,159,10,0.25); }
+  .app-btn.zebra:hover { background: rgba(255,159,10,0.25); transform: translateY(-1px); }
+  .app-btn.sileo { background: rgba(191,90,242,0.15); color: var(--accent4); border: 1px solid rgba(191,90,242,0.25); }
+  .app-btn.sileo:hover { background: rgba(191,90,242,0.25); transform: translateY(-1px); }
 
-  /* section */
   .section { margin-top: 32px; }
   .section-title {
     font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
@@ -104,80 +95,71 @@
     margin-bottom: 10px; padding-left: 2px;
   }
 
-  /* info cards */
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .info-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px;
-  }
+  .info-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
   .info-card .ic-label { font-size: 11px; color: var(--text3); margin-bottom: 4px; }
   .info-card .ic-val { font-size: 15px; font-weight: 500; color: var(--text); }
   .info-card .ic-val.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
   .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; }
   .dot.green { background: var(--accent2); box-shadow: 0 0 6px var(--accent2); }
 
-  /* how to add */
-  .how-card {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: 14px; overflow: hidden;
-  }
-  .how-step {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 16px 18px; border-bottom: 1px solid var(--border);
-  }
+  .how-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .how-step { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; border-bottom: 1px solid var(--border); }
   .how-step:last-child { border-bottom: none; }
   .step-num {
     min-width: 26px; height: 26px; border-radius: 8px;
     background: rgba(0,122,255,0.15); border: 1px solid rgba(0,122,255,0.25);
     display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 700; color: var(--accent);
-    margin-top: 1px;
+    font-size: 12px; font-weight: 700; color: var(--accent); margin-top: 1px;
   }
   .how-step-text .ht { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
   .how-step-text .hs { font-size: 13px; color: var(--text2); line-height: 1.5; }
-  .how-step-text .url-chip {
+  .url-chip {
     display: inline-block; margin-top: 5px;
     font-family: 'JetBrains Mono', monospace; font-size: 12px;
     background: rgba(0,122,255,0.1); border: 1px solid rgba(0,122,255,0.2);
-    color: var(--accent); padding: 3px 10px; border-radius: 5px;
+    color: var(--accent); padding: 3px 10px; border-radius: 5px; cursor: pointer;
   }
 
-  /* packages list */
-  .pkg-empty {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: 14px; padding: 36px;
-    text-align: center; color: var(--text3);
+  .other-repo-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .other-repo-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px; border-bottom: 1px solid var(--border); gap: 12px;
   }
-  .pkg-empty .pe-icon { font-size: 36px; margin-bottom: 10px; opacity: .5; }
-  .pkg-empty .pe-text { font-size: 14px; }
+  .other-repo-row:last-child { border-bottom: none; }
+  .other-repo-info .orname { font-size: 14px; font-weight: 500; color: var(--text); }
+  .other-repo-info .ordesc { font-size: 12px; color: var(--text3); margin-top: 2px; }
+  .other-repo-btns { display: flex; gap: 6px; flex-shrink: 0; }
+  .mini-btn {
+    font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 7px;
+    text-decoration: none; transition: all .15s;
+  }
+  .mini-btn.c { background: rgba(0,122,255,0.15); color: var(--accent); border: 1px solid rgba(0,122,255,0.2); }
+  .mini-btn.z { background: rgba(255,159,10,0.12); color: var(--accent3); border: 1px solid rgba(255,159,10,0.2); }
+  .mini-btn.s { background: rgba(191,90,242,0.12); color: var(--accent4); border: 1px solid rgba(191,90,242,0.2); }
+  .mini-btn:hover { opacity: 0.75; transform: translateY(-1px); }
 
-  /* footer */
-  footer {
-    margin-top: 52px; padding-top: 24px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    font-size: 12px; color: var(--text3);
-    line-height: 1.8;
-  }
+  .pkg-empty { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 28px; text-align: center; color: var(--text3); }
+  .pkg-empty .pe-icon { font-size: 32px; margin-bottom: 10px; opacity: .5; }
+  .pkg-empty .pe-text { font-size: 14px; line-height: 1.7; }
+
+  footer { margin-top: 52px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text3); line-height: 1.8; }
   footer a { color: var(--text3); text-decoration: none; }
   footer a:hover { color: var(--text2); }
 
-  /* copy toast */
   .toast {
     position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
     background: var(--bg3); border: 1px solid var(--border2);
     color: var(--text); font-size: 13px; padding: 10px 20px; border-radius: 10px;
     opacity: 0; transition: all .25s; pointer-events: none;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-    white-space: nowrap; z-index: 999;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4); white-space: nowrap; z-index: 999;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
   @media (max-width: 480px) {
     .info-grid { grid-template-columns: 1fr; }
     .repo-name { font-size: 24px; }
+    .other-repo-row { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -190,13 +172,22 @@
     <div class="repo-name">HongRepo</div>
     <div class="repo-url">https://rudxor0525.github.io/hongrepo</div>
     <div class="repo-desc">rudxor0525의 개인 Cydia 레포지토리입니다. iOS 트윅 & 패키지를 배포해요.</div>
-    <a class="add-btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://rudxor0525.github.io/hongrepo">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M4 7l4 4 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-      Cydia에 추가하기
-    </a>
+    <div class="app-btns">
+      <a class="app-btn cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://rudxor0525.github.io/hongrepo/">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M4 7l4 4 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        Cydia
+      </a>
+      <a class="app-btn zebra" href="zbra://sources/add/https://rudxor0525.github.io/hongrepo/">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M4 7l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Zebra
+      </a>
+      <a class="app-btn sileo" href="sileo://source/https://rudxor0525.github.io/hongrepo/">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M4 7l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Sileo
+      </a>
+    </div>
   </header>
 
-  <!-- 레포 정보 -->
   <div class="section">
     <div class="section-title">레포지토리 정보</div>
     <div class="info-grid">
@@ -214,27 +205,26 @@
       </div>
       <div class="info-card">
         <div class="ic-label">패키지 수</div>
-        <div class="ic-val" id="pkg-count">0개</div>
+        <div class="ic-val">19개</div>
       </div>
     </div>
   </div>
 
-  <!-- 추가 방법 -->
   <div class="section">
-    <div class="section-title">레포 추가 방법</div>
+    <div class="section-title">직접 추가하는 방법</div>
     <div class="how-card">
       <div class="how-step">
         <div class="step-num">1</div>
         <div class="how-step-text">
-          <div class="ht">Cydia 앱 열기</div>
-          <div class="hs">탈옥된 기기에서 Cydia 또는 Sileo 앱을 실행하세요</div>
+          <div class="ht">패키지 앱 열기</div>
+          <div class="hs">Cydia, Zebra, 또는 Sileo 앱을 실행하세요</div>
         </div>
       </div>
       <div class="how-step">
         <div class="step-num">2</div>
         <div class="how-step-text">
           <div class="ht">Sources → 편집 → 추가</div>
-          <div class="hs">하단 Sources 탭 → 우측 상단 Edit → 좌측 상단 Add 탭</div>
+          <div class="hs">Sources 탭 → Edit → Add (앱마다 위치가 조금 달라요)</div>
         </div>
       </div>
       <div class="how-step">
@@ -242,8 +232,8 @@
         <div class="how-step-text">
           <div class="ht">주소 입력</div>
           <div class="hs">아래 주소를 복사해서 붙여넣으세요</div>
-          <div class="url-chip" id="copy-url" onclick="copyUrl()" style="cursor:pointer;">
-            https://rudxor0525.github.io/hongrepo &nbsp;📋
+          <div class="url-chip" onclick="copyUrl()">
+            https://rudxor0525.github.io/hongrepo/ &nbsp;📋
           </div>
         </div>
       </div>
@@ -257,19 +247,78 @@
     </div>
   </div>
 
-  <!-- 패키지 목록 -->
+  <div class="section">
+    <div class="section-title">추천 레포</div>
+    <div class="other-repo-card">
+      <div class="other-repo-row">
+        <div class="other-repo-info">
+          <div class="orname">MTerminal</div>
+          <div class="ordesc">repo.chariz.com</div>
+        </div>
+        <div class="other-repo-btns">
+          <a class="mini-btn c" href="cydia://url/https://repo.chariz.com">Cydia</a>
+          <a class="mini-btn z" href="zbra://sources/add/https://repo.chariz.com">Zebra</a>
+          <a class="mini-btn s" href="sileo://source/https://repo.chariz.com">Sileo</a>
+        </div>
+      </div>
+      <div class="other-repo-row">
+        <div class="other-repo-info">
+          <div class="orname">Filza File Manager</div>
+          <div class="ordesc">tigisoftware.com/repo</div>
+        </div>
+        <div class="other-repo-btns">
+          <a class="mini-btn c" href="cydia://url/http://tigisoftware.com/repo/">Cydia</a>
+          <a class="mini-btn z" href="zbra://sources/add/http://tigisoftware.com/repo/">Zebra</a>
+          <a class="mini-btn s" href="sileo://source/http://tigisoftware.com/repo/">Sileo</a>
+        </div>
+      </div>
+      <div class="other-repo-row">
+        <div class="other-repo-info">
+          <div class="orname">Havoc</div>
+          <div class="ordesc">havoc.app</div>
+        </div>
+        <div class="other-repo-btns">
+          <a class="mini-btn c" href="cydia://url/https://havoc.app">Cydia</a>
+          <a class="mini-btn z" href="zbra://sources/add/https://havoc.app">Zebra</a>
+          <a class="mini-btn s" href="sileo://source/https://havoc.app">Sileo</a>
+        </div>
+      </div>
+      <div class="other-repo-row">
+        <div class="other-repo-info">
+          <div class="orname">Chariz</div>
+          <div class="ordesc">repo.chariz.com</div>
+        </div>
+        <div class="other-repo-btns">
+          <a class="mini-btn c" href="cydia://url/https://repo.chariz.com">Cydia</a>
+          <a class="mini-btn z" href="zbra://sources/add/https://repo.chariz.com">Zebra</a>
+          <a class="mini-btn s" href="sileo://source/https://repo.chariz.com">Sileo</a>
+        </div>
+      </div>
+      <div class="other-repo-row">
+        <div class="other-repo-info">
+          <div class="orname">Akemi (あけみ)</div>
+          <div class="ordesc">cydia.akemi.ai</div>
+        </div>
+        <div class="other-repo-btns">
+          <a class="mini-btn c" href="cydia://url/https://cydia.akemi.ai">Cydia</a>
+          <a class="mini-btn z" href="zbra://sources/add/https://cydia.akemi.ai">Zebra</a>
+          <a class="mini-btn s" href="sileo://source/https://cydia.akemi.ai">Sileo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-title">패키지 목록</div>
     <div class="pkg-empty">
-      <div class="pe-icon">📭</div>
-      <div class="pe-text">아직 등록된 패키지가 없어요<br>곧 업데이트될 예정입니다</div>
+      <div class="pe-icon">📦</div>
+      <div class="pe-text">AppInst · AppSync Unified · Frida<br>MLDecrypt · ipwnderlite · Dropbear · AlertDismiss 외</div>
     </div>
   </div>
 
   <footer>
     HongRepo · rudxor0525<br>
-    <a href="https://github.com/rudxor0525/rudxor0525.github.io">GitHub</a> · 
-    Made with ❤️
+    <a href="https://github.com/rudxor0525/hongrepo">GitHub</a> · Made with ❤️
   </footer>
 
 </div>
@@ -278,7 +327,7 @@
 
 <script>
 function copyUrl() {
-  navigator.clipboard.writeText('https://rudxor0525.github.io/hongrepo').then(() => {
+  navigator.clipboard.writeText('https://rudxor0525.github.io/hongrepo/').then(() => {
     const t = document.getElementById('toast');
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2200);
