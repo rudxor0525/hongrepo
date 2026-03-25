@@ -1,0 +1,162 @@
+Package: ai.akemi.appinst
+Version: 2.1.1
+Architecture: iphoneos-arm64
+Name: AppInst (arm64)
+Description: Install IPA files from the command line
+Maintainer: akemi
+Filename: debs/ai.akemi.appinst_2.1.1_iphoneos-arm64~akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
+Section: Utilities
+
+Package: ai.akemi.appinst
+Version: 2.1.1
+Architecture: iphoneos-arm
+Name: AppInst (arm)
+Description: Install IPA files from the command line
+Maintainer: akemi
+Filename: debs/ai.akemi.appinst_2.1.1_iphoneos-arm~akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
+Section: Utilities
+
+Package: ai.akemi.appsyncunified
+Version: 116.0
+Architecture: iphoneos-arm
+Name: AppSync Unified (arm)
+Description: Sync, decrypt, backup, and restore apps freely
+Maintainer: akemi
+Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
+Section: System
+
+Package: ai.akemi.appsyncunified
+Version: 116.0
+Architecture: iphoneos-arm64
+Name: AppSync Unified (arm64)
+Description: Sync, decrypt, backup, and restore apps freely
+Maintainer: akemi
+Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
+Section: System
+
+Package: com.hackcatml.mldecrypt
+Version: 0.2.3
+Architecture: iphoneos-arm
+Name: MLDecrypt (arm)
+Description: Decrypt apps on-device
+Maintainer: hackcatml
+Filename: debs/com.hackcatml.mldecrypt_0.2.3_iphoneos-arm.deb
+Section: Utilities
+
+Package: com.hackcatml.mldecrypt
+Version: 0.2.3
+Architecture: iphoneos-arm64
+Name: MLDecrypt IPA Extract (arm64)
+Description: Decrypt apps on-device
+Maintainer: hackcatml
+Filename: debs/com.hackcatml.mldecrypt_ipa_extract_0.2.3_iphoneos-arm64.deb
+Section: Utilities
+
+Package: com.lukezgd.dropbear
+Version: 1.0
+Architecture: iphoneos-arm
+Name: Dropbear
+Description: SSH server for jailbroken devices
+Maintainer: lukezgd
+Filename: debs/com.lukezgd.dropbear.deb
+Section: Networking
+
+Package: com.lukezgd.newterminstaller
+Version: 1.0
+Architecture: iphoneos-arm
+Name: NewTerm Installer
+Description: Installer for NewTerm terminal app
+Maintainer: lukezgd
+Filename: debs/com.lukezgd.newterminstaller.deb
+Section: Utilities
+
+Package: re.frida.server
+Version: 16.1.4
+Architecture: iphoneos-arm
+Name: Frida (arm) 16.1.4
+Description: Dynamic instrumentation toolkit
+Maintainer: Frida
+Filename: debs/frida_16.1.4_iphoneos-arm.deb
+Section: Development
+
+Package: re.frida.server
+Version: 16.1.4
+Architecture: iphoneos-arm64
+Name: Frida (arm64) 16.1.4
+Description: Dynamic instrumentation toolkit
+Maintainer: Frida
+Filename: debs/frida_16.1.4_iphoneos-arm64.deb
+Section: Development
+
+Package: re.frida.server
+Version: 16.7.13
+Architecture: iphoneos-arm
+Name: Frida (arm) 16.7.13
+Description: Dynamic instrumentation toolkit
+Maintainer: Frida
+Filename: debs/frida_16.7.13_iphoneos-arm.deb
+Section: Development
+
+Package: re.frida.server
+Version: 16.7.13
+Architecture: iphoneos-arm64
+Name: Frida (arm64) 16.7.13
+Description: Dynamic instrumentation toolkit
+Maintainer: Frida
+Filename: debs/frida_16.7.13_iphoneos-arm64.deb
+Section: Development
+
+Package: com.ipwnderlite
+Version: 1.0.69
+Architecture: iphoneos-arm
+Name: ipwnderlite32 (arm)
+Description: Jailbreak tool
+Maintainer: ipwnderlite
+Filename: debs/ipwnderlite32_1.0.69-1_iphoneos-arm.deb
+Section: System
+
+Package: com.ipwnderlite64
+Version: 1.0.69
+Architecture: iphoneos-arm
+Name: ipwnderlite64 (arm)
+Description: Jailbreak tool
+Maintainer: ipwnderlite
+Filename: debs/ipwnderlite64_1.0.69_iphoneos-arm.deb
+Section: System
+
+Package: com.ipwnderlite
+Version: 1.0.69
+Architecture: iphoneos-arm64
+Name: ipwnderlite (arm64)
+Description: Jailbreak tool
+Maintainer: ipwnderlite
+Filename: debs/ipwnderlite_1.0.69_iphoneos-arm64.deb
+Section: System
+
+Package: me.jjolano.alertdismiss
+Version: 1.0.4
+Architecture: iphoneos-arm
+Name: AlertDismiss
+Description: Auto dismiss alerts
+Maintainer: jjolano
+Filename: debs/me.jjolano.alertdismiss.deb
+Section: Tweaks
+
+Package: me.jjolano.alertdismiss
+Version: 1.0.4
+Architecture: iphoneos-arm64
+Name: AlertDismiss (arm64)
+Description: Auto dismiss alerts
+Maintainer: jjolano
+Filename: debs/me.jjolano.alertdismiss_1.0.4_iphoneos-arm64.deb
+Section: Tweaks
+
+Package: ai.akemi.appsyncunified
+Version: 116.0
+Architecture: iphoneos-arm64
+Name: AppSync Unified - No Delete (arm64)
+Description: AppSync Unified without delete function
+Maintainer: akemi
+Filename: debs/nodelete-ai.akemi.appsyncunified.deb
+Section: System
+
