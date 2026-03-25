@@ -1,0 +1,8 @@
+Origin: HongRepo
+Label: HongRepo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: rudxor0525's Personal Cydia Repository
