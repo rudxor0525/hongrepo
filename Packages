@@ -330,3 +330,18 @@ Homepage: https://frida.re/
 Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>
 Name: Frida
+
+Package: com.cannathea.afc2d-arm64
+Version: 1.2.1
+Architecture: iphoneos-arm64
+Name: Apple File Conduit "2" (iOS 11+, arm64)
+Description: Allow full file-system access over USB for all arm64 devices, especially useful for those on iOS 11 and above.
+Maintainer: Cannathea
+Author: Cannathea
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: cy+cpu.arm64, ldid
+Section: System
+MD5sum: 5ab70f252df295b9ff6a1abf76134497
+SHA256: f8432b0621e3cab89d2f6993bbf2b1b33d65b023eec95949a2d60e3110cecf09
+Filename: debs/com.cannathea.afc2d-arm64_1.2.1.deb
+Depiction: https://moreinfo.thebigboss.org/moreinfo/depiction.php?file=afc2kpplessDp
